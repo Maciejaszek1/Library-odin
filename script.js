@@ -1,3 +1,7 @@
+let library = [];
+
+const addBookButton = document.getElementById('addBook');
+
 function Book(name, author, pages, read) {
     this.name = name;
     this.author = author;
@@ -8,5 +12,17 @@ function Book(name, author, pages, read) {
     }
 }
 
-const theHobbit = new Book('The Hobbit','J.R.R. Tolkien','295','not read');
-console.log(theHobbit.info());
+function addBookToLibrary () {
+    let name = prompt("Name of the book:");
+    let author = prompt("Author:");
+    let pages = prompt("Number of pages:");
+    let read = prompt("Is the book read?");
+
+    const newBook = new Book(name,author,pages,read);
+    library.push(newBook);
+
+    console.log(newBook.info());
+
+}
+
+addBookButton.addEventListener('click', addBookToLibrary);
