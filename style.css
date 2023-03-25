@@ -1,0 +1,42 @@
+:root {
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.body, .container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 10fr 0.5fr;
+    grid-template-areas: "header"
+                         "content"
+                         "footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer{
+    grid-area: footer;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    box-shadow: 0 -10px 0.3rem black); 
+}
+
+.fText {
+    color: #FFFBEB;
+    text-decoration: none;
+    font-size: 18px;
+}
