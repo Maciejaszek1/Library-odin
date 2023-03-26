@@ -18,10 +18,49 @@
 
 .header {
     grid-area: header;
+
+    background-color: black;
+    box-shadow: 0 0 0.7rem black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > button {
+    margin-right: 10rem;
+
+    background-color: white;
+    box-shadow: 0 0 0.3rem white;
+    
+    border: 1px solid white;
+    border-radius: 12px;
+
+    width: 12rem;
+    height: 5rem;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.headerText {
+    margin-left: 10rem;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
 }
 
 .content {
     grid-area: content;
+    height: 80vh;
+    background-color: black;
 }
 
 .footer{
@@ -32,7 +71,7 @@
     align-items: center;
 
     background-color: black;
-    box-shadow: 0 -10px 0.3rem black); 
+    box-shadow: 0 -0 0.3rem black; 
 }
 
 .fText {
