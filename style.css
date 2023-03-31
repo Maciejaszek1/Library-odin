@@ -30,17 +30,18 @@
 .header > button {
     margin-right: 10rem;
 
-    background-color: white;
-    box-shadow: 0 0 0.2rem white;
+    background-color: black;
+    box-shadow: 0 0 0.3rem white;
     
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 12px;
 
-    width: 12rem;
-    height: 3.5rem;
+    width: 14rem;
+    height: 4rem;
 
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
+    color: white;
 }
 
 .headerText {
@@ -62,26 +63,60 @@
 .cards{
     position: absolute;
     max-height: 80%;
-    max-width: 80%;
+    max-width: 90%;
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 4fr));
     grid-row-gap: 5rem;
-    grid-column-gap: 5rem;
+    grid-column-gap: 10rem;
 }
 
 .card {
-    width: clamp(50px, 8rem, 200px);
-    height: clamp(100px, 12rem, 300px);
-    background-color: crimson;
+    width: clamp(150px, 25rem, 400px);
+    height: clamp(100px, 15rem, 300px);
+    background-color: rgba(0, 0, 0, 0.7);
     place-self: center;
+    
+    box-shadow: 0 0 0.24rem black;
+    
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 12px;
+
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card h1 {
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.card h3 {
+    margin-left: 40px;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.card p {
+    margin-left: 40px;
+    margin-top: 30px;    
+    font-size: 18px;
+    color: white;
+    word-wrap: break-word;
 }
 
 .content > img {
     max-height: 80%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.6;
+    opacity: 0.7;
     position: absolute;
 }
 
@@ -90,21 +125,39 @@
     grid-area: footer;
     width:100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 0.3rem;
+    justify-content: space-between;
 
     background-color: black;
     box-shadow: 0 0 0.3rem black; 
 }
 
-.footer > img {
-    max-height: 50%;
+.fGitContainer {
+    margin-right: 10rem;
+    height: 5vh;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.fGitContainer > img {
+    max-height: 35%;
     max-width: auto;
 }
 
-.fText {
+.fGitText {
     color: #FFFBEB;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.fPhotoText {
+    margin-left: 10rem;
+    justify-self: flex-start;
+    color: #FFFBEB;
+    text-decoration: none;
+    font-size: 14px;
 }
