@@ -31,7 +31,6 @@
     margin-right: 10rem;
 
     background-color: black;
-    box-shadow: 0 0 0.3rem white;
     
     border: 2px solid white;
     border-radius: 12px;
@@ -41,6 +40,18 @@
 
     font-size: 24px;
     font-weight: 700;
+    color: white;
+}
+
+.header > button:hover {
+    background-color: white;
+    box-shadow: 0 0 0.3rem white;
+
+    color: black;
+}
+
+.header > button:active {
+    background-color: black;
     color: white;
 }
 
@@ -79,7 +90,7 @@
     
     box-shadow: 0 0 0.24rem black;
     
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0);
     border-radius: 12px;
 
     backdrop-filter: blur(15px);
