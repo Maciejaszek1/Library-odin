@@ -32,7 +32,7 @@
 
     background-color: black;
     
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 12px;
 
     width: 14rem;
@@ -45,7 +45,7 @@
 
 .header > button:hover {
     background-color: white;
-    box-shadow: 0 0 0.3rem white;
+    box-shadow: 0 0 0.4rem white;
 
     color: black;
 }
@@ -73,13 +73,21 @@
 
 .cards{
     position: absolute;
-    max-height: 80%;
-    max-width: 90%;
+    max-height: 70%;
+    max-width: 70%;
     
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 4fr));
     grid-row-gap: 5rem;
     grid-column-gap: 10rem;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
