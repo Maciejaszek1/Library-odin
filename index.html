@@ -70,10 +70,35 @@
                     Maciej Syguła</a>
             </div>
         </div>
+        <dialog class="modal" id="modal">
+            <form>
+                    <fieldset>
+                        <legend>New Book:</legend>
+                        <div class = singleForm>
+                            <label for="title">Title</label> <br>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class = singleForm>
+                            <label for="author">Author</label> <br>
+                            <input type="text" id="author" name="author" required>
+                        </div>
+                        <div class = singleForm>
+                            <label for="pages">Pages</label> <br>
+                            <input type="text" id="pages" name="pages" required>
+                        </div>
+                        <div class = singleForm>
+                            <label for="formButtons">Finished?</label> <br>
+                            <div id="formButtons">
+                                <button>Yes</button>
+                                <button>No</button>
+                                <button type="submit" class="addButton">Add</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+            </form>
+        </dialog>
     </div>
-    <dialog class="modal" id="modal">
-        <form>
-    </dialog>
 </body>
 <script src="script.js"></script>
 </html>

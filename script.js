@@ -1,6 +1,7 @@
 let library = [];
 
 const addBookButton = document.getElementById('addBook');
+const modal = document.getElementById("modal");
 
 function Book(name, author, pages, read) {
     this.name = name;
@@ -13,11 +14,15 @@ function Book(name, author, pages, read) {
 }
 
 function addBookToLibrary () {
-    let name = prompt("Name of the book:");
-    let author = prompt("Author:");
-    let pages = prompt("Number of pages:");
-    let read = prompt("Is the book read?");
-
+    // let name = prompt("Name of the book:");
+    // let author = prompt("Author:");
+    // let pages = prompt("Number of pages:");
+    // let read = prompt("Is the book read?");
+    let name = document.getElementById("title");
+    let author = document.getElementById("author");
+    let pages = document.getElementById("pages");
+    modal.style.display = "block";
+    
     const postCards = document.querySelector('.cards');
 
     const newBook = new Book(name,author,pages,read);

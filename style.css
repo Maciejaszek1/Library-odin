@@ -180,3 +180,84 @@
     text-decoration: none;
     font-size: 14px;
 }
+
+.modal {
+    height: 30%;
+    width: 15%;
+    
+    position: absolute;
+    place-self: center;
+    
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 0.24rem white;
+    
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+.modal legend {
+    font-size: 24px;
+    align-self: center;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 14px;
+}
+
+.modal .singleForm {
+    margin-bottom: 0.75rem;
+}
+
+input {
+    height: 1.5rem;
+    width: 95%;
+    margin-top: 5px;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid white;
+    box-shadow: 0 0 .4rem #cecfd3;
+
+}
+
+.modal #formButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal button {
+    background-color: black;
+    
+    border: 3px solid white;
+    border-radius: 12px;
+
+    width: 30%;
+    height: 2.5rem;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.modal button:hover {
+    background-color: white;
+    box-shadow: 0 0 0.4rem white;
+
+    color: black;
+}
+
+.modal button:active {
+    background-color: black;
+    color: white;
+}
+
+/* 
+.modal .addButton {
+    margin-left: 64%;
+} */
