@@ -2,6 +2,7 @@ let library = [];
 
 const showModal = document.getElementById('addBook');
 const addButton = document.getElementById('addButton');
+const deleteButtons = document.getElementById('delete');
 showModal.onclick = function() {
     modal.style.display = "block";
 }
@@ -30,18 +31,30 @@ function addBookToLibrary () {
     const postElement = document.createElement('div');
     
     postElement.classList.add('card');
+    postElement.setAttribute('id',bookNum);
     postElement.innerHTML = 
     `
         <h1>${library[bookNum].title}</h1>
         <h3>${library[bookNum].author}</h3>
-        <p>${library[bookNum].pages}</p>
-        <p>${library[bookNum].read}</p>
+        <p>${library[bookNum].pages} pages</p>
     `;
 
     postCards.appendChild(postElement);
     modal.style.display = "none";
+    console.log(library);
+    console.log(deleteButtons);
+}
+
+function deleteBook(event) {
+    console.log('deleteBook called');   
+    console.log('bookElement:', bookElement);
+    const bookIndex = parseInt(bookElement.getAttribute('id'));
+    library.splice(bookIndex, 1);
+    console.log('bookIndex:', bookIndex);
+
+    bookElement.remove();
+    console.log(library);
 }
 
 addButton.addEventListener('click', addBookToLibrary);
-
-
+deleteButtons.addEventListener('click', deleteBook);

@@ -27,8 +27,8 @@
     align-items: center;
 }
 
-.header > button {
-    margin-right: 10rem;
+.headerButtons > button {
+    margin-right: 5rem;
 
     background-color: black;
     
@@ -43,14 +43,14 @@
     color: white;
 }
 
-.header > button:hover {
+.headerButtons > button:hover {
     background-color: white;
     box-shadow: 0 0 0.4rem white;
 
     color: black;
 }
 
-.header > button:active {
+.headerButtons > button:active {
     background-color: black;
     color: white;
 }
@@ -118,17 +118,45 @@
 .card h3 {
     margin-left: 40px;
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 700;
     color: white;
 }
 
 .card p {
     margin-left: 40px;
-    margin-top: 30px;    
+    margin-top: 20px;    
     font-size: 18px;
     color: white;
     word-wrap: break-word;
+}
+
+.card button {
+    background-color: black;
+    
+    border: 3px solid white;
+    border-radius: 12px;
+
+    width: 30%;
+    height: 2.5rem;
+    margin-left: 40px;
+    margin-top: 20px;
+
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.card button:hover {
+    background-color: white;
+    box-shadow: 0 0 0.4rem white;
+
+    color: black;
+}
+
+.card button:active {
+    background-color: black;
+    color: white;
 }
 
 .content > img {
@@ -182,8 +210,8 @@
 }
 
 .modal {
-    height: 30%;
-    width: 15%;
+    height: 23rem;
+    width: 20rem;
     
     position: absolute;
     place-self: center;
@@ -198,6 +226,7 @@
 
 .modal legend {
     font-size: 24px;
+    font-weight: 700;
     align-self: center;
     margin-bottom: 1.5rem;
 }
