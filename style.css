@@ -1,5 +1,10 @@
 :root {
     font-family: Roboto, Helvetica, sans-serif;
+    cursor: default;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .body, .container {
@@ -27,8 +32,8 @@
     align-items: center;
 }
 
-.headerButtons > button {
-    margin-right: 5rem;
+.header > button {
+    margin-right: 10rem;
 
     background-color: black;
     
@@ -43,14 +48,14 @@
     color: white;
 }
 
-.headerButtons > button:hover {
+.header > button:hover {
     background-color: white;
     box-shadow: 0 0 0.4rem white;
 
     color: black;
 }
 
-.headerButtons > button:active {
+.header > button:active {
     background-color: black;
     color: white;
 }
@@ -107,6 +112,11 @@
     flex-direction: column;
 }
 
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
 .card h1 {
     margin-left: 40px;
     margin-top: 30px;
@@ -132,32 +142,28 @@
 }
 
 .card button {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     
-    border: 3px solid white;
-    border-radius: 12px;
+    border: 0px solid white;
+    border-radius: 100px;
 
-    width: 30%;
-    height: 2.5rem;
-    margin-left: 40px;
+    margin-right: 20px;
     margin-top: 20px;
 
-    font-size: 16px;
+    height: 25px;
+
+    font-size: 20px;
     font-weight: 700;
     color: white;
 }
 
 .card button:hover {
-    background-color: white;
-    box-shadow: 0 0 0.4rem white;
+    margin-right: 17px;
+    margin-top: 13px;
+    font-size: 32px;
 
-    color: black;
 }
 
-.card button:active {
-    background-color: black;
-    color: white;
-}
 
 .content > img {
     max-height: 80%;
@@ -209,6 +215,10 @@
     font-size: 14px;
 }
 
+.fPhotoText:hover, .fGitText:hover {
+    text-decoration: underline;
+}
+
 .modal {
     height: 23rem;
     width: 20rem;
@@ -218,10 +228,8 @@
     
     color: white;
     background-color: black;
-    box-shadow: 0 0 0.24rem white;
     
-    border: 2px solid white;
-    border-radius: 12px;
+    border: 2px solid black;
 }
 
 .modal legend {
@@ -255,12 +263,22 @@ input:focus {
 
 }
 
-.modal #formButtons {
-    display: flex;
-    justify-content: space-between;
+#formButtons input {
+    height: 0.75rem;
+    width: 5%;
+
+    margin-top: 5px;
 }
 
-.modal button {
+#formButtons input:focus {
+    outline: none;
+    border: 0 solid white;
+    box-shadow: 0 0 0 #cecfd3;
+}
+
+
+
+#addButton {
     background-color: black;
     
     border: 3px solid white;
@@ -269,19 +287,21 @@ input:focus {
     width: 30%;
     height: 2.5rem;
 
+    margin-top: 20px;
+
     font-size: 16px;
     font-weight: 700;
     color: white;
 }
 
-.modal button:hover {
+#addButton:hover {
     background-color: white;
     box-shadow: 0 0 0.4rem white;
 
     color: black;
 }
 
-.modal button:active {
+#addButton:active {
     background-color: black;
     color: white;
 }

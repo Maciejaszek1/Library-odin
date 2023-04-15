@@ -13,24 +13,16 @@
     <div class="container">
         <div class="header">
             <p class="headerText">My library</p>
-                <div class="headerButtons">
-                    <button id="addBook">Add a Book</button>
-                    <button id="delete">Delete</button>
-                </div>
+            <button id="addBook">Add a Book</button>
         </div>
         <div class="content">
             <img src="msm.jpg">
             <div class="cards" id="cards">
-                <div class="card">
-                    <h1>Hobbit</h1>
-                    <h3>J.R.R. Tolkien</h3>
-                    <p>256 pages</p>
-                </div>
             </div>
         </div>
         <div class="footer">
-            <a class="fPhotoText" href="https://www.pexels.com/photo/close-up-shot-of-a-snow-covered-rocky-mountain-during-sunset-4261096/">
-                Photo made by Gianuca Grisentis
+            <a class="fPhotoText" href="https://unsplash.com/photos/EWu1lmrrMek">
+                Photo made by Marek Piwnicki
             </a>
             <div class="fGitContainer">
                 <img src="github-mark-white.svg" href="https://github.com/Maciejaszek1">
@@ -57,7 +49,10 @@
                         <div class = singleForm>
                             <label for="formButtons">Finished?</label> <br>
                             <div id="formButtons">
-                                <input type="text" id="read" name="read" required>
+                                <input type="radio" id="yes" name="finished" value="Yes">
+                                <label for="yes">Yes</label><br>
+                                <input type="radio" id="no" name="finished" value="No">
+                                <label for="no">No</label>
                             </div>
                         </div>
                         <button type="button" class="addButton" id="addButton">Add</button>

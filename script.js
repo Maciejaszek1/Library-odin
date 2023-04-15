@@ -2,7 +2,8 @@ let library = [];
 
 const showModal = document.getElementById('addBook');
 const addButton = document.getElementById('addButton');
-const deleteButtons = document.getElementById('delete');
+let deleteButtons = document.querySelectorAll('.delete');
+
 showModal.onclick = function() {
     modal.style.display = "block";
 }
@@ -34,7 +35,10 @@ function addBookToLibrary () {
     postElement.setAttribute('id',bookNum);
     postElement.innerHTML = 
     `
-        <h1>${library[bookNum].title}</h1>
+        <div class="cardHeader">
+            <h1>${library[bookNum].title}</h1>
+            <button class="delete">&#215</button>
+        </div>
         <h3>${library[bookNum].author}</h3>
         <p>${library[bookNum].pages} pages</p>
     `;
@@ -43,18 +47,27 @@ function addBookToLibrary () {
     modal.style.display = "none";
     console.log(library);
     console.log(deleteButtons);
+    deleteButtons = document.querySelectorAll('.delete');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', deleteBook);
+    });
 }
 
 function deleteBook(event) {
-    console.log('deleteBook called');   
-    console.log('bookElement:', bookElement);
-    const bookIndex = parseInt(bookElement.getAttribute('id'));
-    library.splice(bookIndex, 1);
-    console.log('bookIndex:', bookIndex);
-
-    bookElement.remove();
+    const button = event.target;
+    const card = button.parentNode.parentNode;
+    const id = card.getAttribute('id');
+    for (let i = id; i < library.length; i++) {
+        const card = document.getElementById(i);
+        card.setAttribute('id', i - 1);
+    }
+    card.parentNode.removeChild(card);
+    library.splice(id, 1);
     console.log(library);
+
 }
 
+deleteButtons.forEach(button => {
+    button.addEventListener('click', deleteBook);
+});
 addButton.addEventListener('click', addBookToLibrary);
-deleteButtons.addEventListener('click', deleteBook);
