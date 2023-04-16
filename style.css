@@ -76,6 +76,13 @@ button:hover {
     place-items: center;
 }
 
+.content > img {
+    height: 80vh;
+    min-width: 100vw;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
 .cards{
     position: absolute;
     max-height: 70%;
@@ -110,11 +117,16 @@ button:hover {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.cardHeader {
+.cardHeader , .cardFooter{
     display: flex;
     justify-content: space-between;
+}
+
+.cardFooter {
+    margin-bottom: 20px;
 }
 
 .card h1 {
@@ -127,7 +139,6 @@ button:hover {
 
 .card h3 {
     margin-left: 40px;
-    margin-top: 30px;
     font-size: 21px;
     font-weight: 700;
     color: white;
@@ -135,13 +146,13 @@ button:hover {
 
 .card p {
     margin-left: 40px;
-    margin-top: 20px;    
+    margin-top: 7px;
     font-size: 18px;
     color: white;
     word-wrap: break-word;
 }
 
-.card button {
+.card .delete {
     background-color: rgba(0, 0, 0, 0);
     
     border: 0px solid white;
@@ -157,20 +168,37 @@ button:hover {
     color: white;
 }
 
-.card button:hover {
+.card .delete:hover {
     margin-right: 17px;
     margin-top: 13px;
     font-size: 32px;
 
 }
 
+.card .readButton {
+    height: 30px;
+    width: 25%;
 
-.content > img {
-    max-height: 80%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    position: absolute;
+    margin-right: 20px;
+    margin-bottom: 5px;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    border: 1px solid white;
+    border-radius: 100px;
+    
+    color: white;
+    font-size: 20px;
+}
+
+.card .readButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.card .readButton:active {
+    background-color: black;
+    color: white;
 }
 
 .footer{

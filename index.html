@@ -36,7 +36,7 @@
                         <legend>New Book:</legend>
                         <div class = singleForm>
                             <label for="title">Title</label> <br>
-                            <input type="text" id="title" name="title" required>
+                            <input type="text" id="title" name="title" maxlength="40" required>
                         </div>
                         <div class = singleForm>
                             <label for="author">Author</label> <br>
@@ -49,10 +49,8 @@
                         <div class = singleForm>
                             <label for="formButtons">Finished?</label> <br>
                             <div id="formButtons">
-                                <input type="radio" id="yes" name="finished" value="Yes">
-                                <label for="yes">Yes</label><br>
-                                <input type="radio" id="no" name="finished" value="No">
-                                <label for="no">No</label>
+                                <input type="radio" id="yes" name="finished" value="Read" checked>Read</input><br>
+                                <input type="radio" id="no" name="finished" value="Unread">Unread</input>
                             </div>
                         </div>
                         <button type="button" class="addButton" id="addButton">Add</button>
